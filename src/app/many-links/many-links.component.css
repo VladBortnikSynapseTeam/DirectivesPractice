@@ -1,0 +1,15 @@
+.hideArticle {
+  color: white;
+}
+a {
+  padding: 5px;
+  margin: 5px;
+}
+.articleContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 5px;
+}
