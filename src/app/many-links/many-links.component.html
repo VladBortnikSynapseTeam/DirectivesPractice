@@ -1,7 +1,7 @@
 <div class="container">
     <p>#5</p>
-    <div class="articleContainer" *ngFor="let i of articles">
-        <p [ngClass]="{hideArticle:i.isHide}">{{i.title}}</p>
-        <input type="checkbox" (change)="hideArticle(i.id)">
+    <div class="articleContainer" *ngFor="let article of articles; let i = index">
+        <input type="checkbox" (change)="hideArticle(i)">
+        <p *ngIf="article.isShown">{{article.title}}</p>
     </div>
 </div>

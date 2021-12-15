@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 export interface Article{
-  id: number;
   title:string;
-  isHide: boolean;
+  isShown: boolean; 
 }
 
 @Component({
@@ -13,19 +12,16 @@ export interface Article{
 })
 export class ManyLinksComponent implements OnInit {
   articles: Article[] = [
-    {id:0, title:"ABCABCABCABCABC", isHide: false},
-    {id:1, title:"ZXCZXCZXCZXCZXC", isHide: false},
-    {id:2, title:"QWEQWEQWEQWEQWE", isHide: false},
-  ]
+  {title:"ABCABCABCABCABC", isShown: true},
+  {title:"ZXCZXCZXCZXCZXC", isShown: true},
+  {title:"QWEQWEQWEQWEQWE", isShown: true}
+]
   constructor() { }
 
   ngOnInit(): void {
   }
-  hideArticle(id:number){
-    this.articles.forEach((article)=>{
-      if(article.id == id){
-        article.isHide = !article.isHide;
-      }
-    })
+  hideArticle(index:number){
+    this.articles[index].isShown = !this.articles[index].isShown;
   }
+
 }

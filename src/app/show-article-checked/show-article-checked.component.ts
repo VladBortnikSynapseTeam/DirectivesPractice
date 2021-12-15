@@ -11,5 +11,7 @@ export class ShowArticleCheckedComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  toogle():void{
+    this.checked = !this.checked;
+  }
 }

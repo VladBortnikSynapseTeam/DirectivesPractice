@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./one-link-article-show.component.css']
 })
 export class OneLinkArticleShowComponent implements OnInit {
-  show = false;
+  show = true;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  toggle():void{
+    this.show = !this.show;
+  }
 }

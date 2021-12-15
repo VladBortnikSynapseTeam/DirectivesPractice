@@ -1,6 +1,6 @@
 
 <div class="container">
     <p>#3</p>
-    <a href="#" (click)="this.show = false">Show</a><a href="#" (click)="this.show = true">Hide</a>
-    <p [ngClass]="{hideArticle:show}">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates ullam, rerum temporibus assumenda eveniet mollitia rem debitis laborum architecto! Quam.</p>
+    <a href="#" (click)="toggle(false)">Hide</a><a href="#" (click)="toggle(true)">Show</a>
+    <p *ngIf="show">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates ullam, rerum temporibus assumenda eveniet mollitia rem debitis laborum architecto! Quam.</p>
 </div>

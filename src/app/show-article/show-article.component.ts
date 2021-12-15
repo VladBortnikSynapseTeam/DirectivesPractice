@@ -11,4 +11,7 @@ export class ShowArticleComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  toggle():void{
+    this.checked = !this.checked;
+  }
 }
