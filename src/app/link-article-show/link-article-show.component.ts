@@ -12,6 +12,6 @@ export class LinkArticleShowComponent implements OnInit {
   ngOnInit(): void {
   }
   toggle(isShown:boolean):void{
-    isShown ? this.show = true : this.show = false;
+    this.show = isShown;
   }
 }
